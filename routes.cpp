@@ -13,7 +13,7 @@ crow::response add(const crow::request &req)
     int sum = input["first"].i() + input["second"].i();
     std::ostringstream os;
     os << sum;
-    crow::json::wvalue x ({{"result", os.str()}});
+    crow::json::wvalue x ({{"result", sum}});
     return x;
 }
 crow::response subtract(const crow::request &req)
@@ -25,7 +25,7 @@ crow::response subtract(const crow::request &req)
     int sum = input["first"].i() - input["second"].i();
     std::ostringstream os;
     os << sum;
-    crow::json::wvalue x ({{"result", os.str()}});
+    crow::json::wvalue x ({{"result", sum}});
     return x;
 
 
